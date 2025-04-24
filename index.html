@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de vCard QR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de vCard con QR</h1>
+    <form id="vcard-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required />
+
+      <label for="codigo">Código de área:</label>
+      <select id="codigo" required>
+        <option value="809">+1 809</option>
+        <option value="829">+1 829</option>
+        <option value="849">+1 849</option>
+      </select>
+
+      <label for="telefono">Número de teléfono:</label>
+      <input type="tel" id="telefono" required />
+
+      <div class="buttons">
+        <button type="submit">Generar QR</button>
+        <button type="button" onclick="limpiarCampos()">Limpiar</button>
+      </div>
+    </form>
+    <div id="qrcode"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
